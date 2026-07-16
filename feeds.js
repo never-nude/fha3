@@ -101,7 +101,7 @@
       if (!items.length) { evBox.innerHTML = '<p class="feed-empty">No upcoming events right now — check back soon.</p>'; afterRender(); return; }
       render(evBox, items, eventCard);
       afterRender();
-    }).catch(function () { evBox.innerHTML = '<p class="feed-empty">Events are unavailable right now.</p>'; });
+    }).catch(function () { evBox.innerHTML = '<p class="feed-empty">Events are unavailable right now.</p>'; afterRender(); });
   }
 
   var postBox = document.getElementById("posts-feed");
@@ -111,9 +111,11 @@
       var items = (d.posts || [])
         .filter(function (p) { return postExpiry(p) >= today; })            // drop expired posts
         .sort(function (a, b) { return (b.date || "").localeCompare(a.date || ""); });  // newest first
+      var plim = parseInt(postBox.getAttribute("data-limit"), 10);
+      if (plim > 0) items = items.slice(0, plim);
       if (!items.length) { postBox.innerHTML = '<p class="feed-empty">No neighborhood posts right now — check back soon.</p>'; afterRender(); return; }
       render(postBox, items, postCard);
       afterRender();
-    }).catch(function () { postBox.innerHTML = '<p class="feed-empty">Posts are unavailable right now.</p>'; });
+    }).catch(function () { postBox.innerHTML = '<p class="feed-empty">Posts are unavailable right now.</p>'; afterRender(); });
   }
 })();

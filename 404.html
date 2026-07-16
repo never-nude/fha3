@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Page not found — The Fisher Hill Association</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#9c1574">
+<!-- Self-contained on purpose: GitHub Pages serves 404.html for ANY missing path,
+     including nested ones, so relative stylesheet/script URLs can't be trusted here. -->
+<style>
+  *{ box-sizing:border-box; }
+  body{ margin:0; min-height:100vh; display:grid; place-items:center; background:#fceaf6;
+        font-family:"Helvetica Neue",Helvetica,Arial,sans-serif; color:#211522; }
+  main{ background:#fff; border:1px solid #ebe0e9; border-top:6px solid #c01a8f; border-radius:14px;
+        padding:40px 44px; max-width:30rem; margin:20px; }
+  .code{ font-weight:800; font-size:15px; letter-spacing:.14em; color:#c01a8f; margin:0 0 10px; }
+  h1{ font-weight:800; font-size:26px; line-height:1.15; letter-spacing:-.01em; margin:0 0 12px; }
+  p{ line-height:1.6; color:#352c41; margin:0 0 8px; }
+  p.es{ color:#6b6068; }
+  a.btn{ display:inline-block; margin-top:18px; background:#c01a8f; color:#fff; text-decoration:none;
+         font-weight:600; font-size:15px; padding:12px 22px; border-radius:10px; }
+  a.btn:hover{ background:#7a1059; }
+</style>
+</head>
+<body>
+<main>
+  <p class="code">404</p>
+  <h1>This block isn't on the map.</h1>
+  <p>The page you're looking for doesn't exist — but the neighborhood does.</p>
+  <p class="es">La página que busca no existe — pero el vecindario sí.</p>
+  <a class="btn" id="home-link" href="index.html">Back to the homepage · Volver al inicio</a>
+</main>
+<script>
+/* On a GitHub Pages project site the 404 can be served at any depth. The static
+   href="index.html" covers the common flat-URL typo without JavaScript; this
+   script re-points the link at the repo root (first path segment) so it also
+   works from nested paths. */
+(function(){
+  var seg = location.pathname.split("/")[1];
+  if (seg) document.getElementById("home-link").href = "/" + seg + "/";
+})();
+</script>
+</body>
+</html>

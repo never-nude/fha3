@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The Fisher Hill Association — White Plains, NY</title>
-<meta name="description" content="The Fisher Hill Association — neighborhood posts, events, agendas, and an interactive 3D map of Fisher Hill in White Plains, New York.">
+<title>Neighborhood Guide — The Fisher Hill Association</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@600;700;800&display=swap" rel="stylesheet">
+<meta name="description" content="A practical bilingual guide for Fisher Hill residents — city services, the library, schools, the hospital, transit, and how to get involved.">
 <meta name="theme-color" content="#9c1574">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="stylesheet" href="styles.css">
@@ -20,11 +20,11 @@
   <a class="side-brand" href="index.html">The<br>Fisher&nbsp;Hill<br>Association</a>
   <div class="side-rule"></div>
   <nav class="side-nav" aria-label="Main">
-    <a href="index.html" class="active" aria-current="page">Home</a>
+    <a href="index.html">Home</a>
     <a href="posts.html">Neighborhood Posts</a>
     <a href="events.html">Events</a>
     <a href="agendas.html">Agendas</a>
-    <a href="resources.html">Neighborhood Guide</a>
+    <a href="resources.html" class="active" aria-current="page">Neighborhood Guide</a>
     <a href="about.html">About</a>
     <a href="join.html">Join the FHA</a>
     <a href="contact.html">Contact</a>
@@ -33,44 +33,15 @@
 </aside>
 
 <main class="main" id="main">
-
-  <div class="hero">
-    <iframe src="map.html" title="Interactive 3D map of Fisher Hill" loading="lazy" scrolling="no"></iframe>
-    <span class="hero-chip"><b>3D fly-through</b> — drag to explore the neighborhood</span>
-    <div class="page-hero-label">Home</div>
+  <div class="page-hero page-hero-brand">
+    <div class="page-hero-label">Neighborhood Guide</div>
   </div>
-
-  <section class="home-feed">
-    <div class="wrap">
-      <div class="feed-head">
-        <h2>Events around White Plains</h2>
-        <a class="feed-seeall" href="events.html">See all events →</a>
-      </div>
-      <div id="events-feed" data-limit="6"></div>
-    </div>
-  </section>
-
-  <section class="home-feed home-board">
-    <div class="wrap">
-      <div class="feed-head">
-        <h2>Fresh on the board</h2>
-        <a class="feed-seeall" href="posts.html">See the board →</a>
-      </div>
-      <div id="posts-feed" data-limit="3"></div>
-    </div>
-  </section>
-
   <div class="wrap">
     <section>
-      <p class="kicker">Welcome</p>
-      <h1 class="title">A historic White Plains neighborhood, organized.</h1>
-      <p class="lede">Fisher Hill sits within walking distance of downtown White Plains — bounded by the Bronx River Parkway to the west and Post Road to the east, with the hospital, library, train station, and City Center just beyond. The Association keeps neighbors connected and informed.</p>
-    </section>
+      <h1 class="title">Know your neighborhood.</h1>
+      <p class="lede">The practical side of living on the Hill — city services, the library, schools, the hospital, and trains, with the official links in one place.</p>
 
-    <section>
-      <p class="kicker">Neighborhood guide</p>
-      <h2>Get things done, locally.</h2>
-      <p class="lede">City services, the library, schools, the hospital, and trains — the practical links for living on the Hill.</p>
+      <h2 class="subhead">The essentials</h2>
       <div class="ql-grid">
         <a class="ql" href="https://www.cityofwhiteplains.com" target="_blank" rel="external noopener">
           <h3>City of White Plains</h3>
@@ -84,14 +55,42 @@
           <h3>White Plains Public Schools</h3>
           <p>The public school district — calendars, enrollment, and school info.</p>
         </a>
+        <a class="ql" href="https://www.wphospital.org" target="_blank" rel="external noopener">
+          <h3>White Plains Hospital</h3>
+          <p>The hospital on the neighborhood's northeast edge — care and visitor info.</p>
+        </a>
         <a class="ql" href="https://www.mta.info" target="_blank" rel="external noopener">
           <h3>Metro-North Railroad</h3>
           <p>Trains from White Plains station to Grand Central and beyond.</p>
         </a>
+        <a class="ql" href="https://wp-cna.org" target="_blank" rel="external noopener">
+          <h3>WPCNA</h3>
+          <p>The citywide council of neighborhood associations — the FHA has a seat.</p>
+        </a>
       </div>
-      <p style="margin-top:20px"><a class="btn ghost" href="resources.html">Open the full guide</a></p>
     </section>
 
+    <section>
+      <h2>Good to know</h2>
+      <ul class="guide-list">
+        <li><strong>Trash, recycling &amp; city services</strong> — pickup schedules and service requests live on the City of White Plains website, under the Public Works department.</li>
+        <li><strong>Getting downtown</strong> — the Metro-North station, the library, and City Center all sit just beyond the neighborhood's northeast corner, within walking distance.</li>
+        <li><strong>The hospital</strong> — White Plains Hospital and its emergency department sit just past Post Road, on the neighborhood's northeast edge.</li>
+      </ul>
+      <div class="emergency"><strong>In an emergency, call 911.</strong> For non-emergency city services, start at the City of White Plains website.</div>
+    </section>
+
+    <section>
+      <h2>Get involved</h2>
+      <p class="lede">The Association is neighbors, not staff — everything here runs on participation.</p>
+      <div class="cards">
+        <a class="card" href="join.html"><h3>Join the FHA</h3><p>Dues are $5–$10 a year and keep the Association running.</p></a>
+        <a class="card" href="posts.html#submit"><h3>Post to the board</h3><p>Lost &amp; found, tag sales, local businesses, neighbor offers.</p></a>
+        <a class="card" href="agendas.html"><h3>Follow the agendas</h3><p>What the board and the city are working on.</p></a>
+        <a class="card" href="contact.html"><h3>Talk to the board</h3><p>Questions, ideas, concerns — a note goes straight to the president.</p></a>
+      </div>
+      <p style="margin-top:18px">The WPCNA — the citywide council the FHA belongs to — meets monthly, typically the second Tuesday at 7:00 p.m.</p>
+    </section>
   </div>
 
   <footer class="site-foot">
@@ -117,11 +116,10 @@
         <p>The WPCNA meets monthly — typically the second Tuesday at 7:00 p.m.</p>
       </div>
     </div>
-    <div class="site-foot-legal">The Fisher Hill Association · White Plains, NY · Map: photorealistic 3D via Google Map Tiles &amp; CesiumJS. · <a href="credits.html">Image credits</a></div>
+    <div class="site-foot-legal">The Fisher Hill Association · White Plains, NY · <a href="credits.html">Image credits</a></div>
   </footer>
 </main>
 
-<script src="feeds.js"></script>
 <script src="i18n.js"></script>
 </body>
 </html>
